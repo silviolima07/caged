@@ -42,7 +42,7 @@ def main():
 
     # Titulo do web app
     html_page1 = """
-    <div style="background-color:blue;padding=50px">
+    <div style="background-color:red;padding=50px">
         <p style='text-align:center;font-size:50px;font-weight:bold;color:blue'>CAGED</p>
     </div>
               """
@@ -126,7 +126,7 @@ def main():
     
     html_page3 = """
     <div style="background-color:blue;padding=40px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:red'>ATUAL</p>
+        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>ATUAL</p>
     </div>
               """
     st.markdown(html_page3, unsafe_allow_html=True)
