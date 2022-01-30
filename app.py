@@ -133,7 +133,7 @@ def main():
        
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
         
-        #colunas = list(df_tab6_1.columns)
+        colunas = list(df_tab6_1.columns)
         
         #data = { 'Grupamento de Atividades Econômicas e Seção CNAE 2.0':df_tab6_1[1:]}
         
