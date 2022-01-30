@@ -113,6 +113,19 @@ def main():
     st.subheader("Mês Inicial  -> "+mes_inicial)
     st.subheader("Ano Inicial  -> "+ano_inicial)
     
+    lista_meses = ['Janeiro', 'Fevereiro', 'Março',
+                   'Abril', 'Maio', 'Junho'
+                   'Julho', 'Agosto', 'Setembro',
+                   'Outubro', 'Novembro','Dezembro']
+    lista_anos = [2020, 2021,2022, 2023,2024,2025]
+    
+    opcao_mes = st.selectbox(
+     'Selecione o mês de interesse',lista_meses)
+     
+    st.write(opcao_mes)
+
+        
+    
     
    
     st.subheader("Inicial  -> "+mes_ano_inicial)
