@@ -134,7 +134,7 @@ def main():
               """
     st.markdown(html_page3, unsafe_allow_html=True)
     
-    st.subheader(str(meses[mes]+'/'+ano))
+    st.subheader(str(meses[mes_final]+'/'+ano))
         
     colunas = list(df_tab6_1.columns)
                
