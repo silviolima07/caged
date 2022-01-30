@@ -108,12 +108,14 @@ def main():
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
     
-    mes_final, ano_final = mes_ano_inicial.split('/')
+    mes_inicial, ano_inicial = mes_ano_inicial.split('/')
+    
+    st.subheader("Mês Inicial  -> "+ano_inicial)
     
     
    
-    st.subheader("Inicial: -> "+mes_ano_inicial)
-    st.subheader("  Atual: -> "+mes_ano_final)
+    st.subheader("Inicial  -> "+mes_ano_inicial)
+    st.subheader("  Atual  -> "+mes_ano_final)
     
     
     
