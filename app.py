@@ -143,7 +143,7 @@ def main():
         #df_tab6_1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"]
         
         
-        st.table(df_tab6_1[colunas][:])
+        st.table(df_tab6_1[colunas][:27])
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
