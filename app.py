@@ -109,8 +109,7 @@ def main():
     mes_ano_inicial = teste_colunas[2][0]
     
     mes_final, ano_final = mes_ano_inicial.split('/')
-    st.write("Mes do ultimo relatório: "+mes_final)
-    #st.write("A do ultimo relatório: "+mes_final)
+    
     
    
     st.subheader("Inicial: "+mes_ano_inicial)
