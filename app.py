@@ -149,6 +149,8 @@ def main():
         
         df_teste = pd.read_csv('./caged.csv')
         
+        df_teste = df_teste.loc[df_teste['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
+        
         st.table(df_teste)
         
         st.table(df_tab6_1[colunas][1:27])
