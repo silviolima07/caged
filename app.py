@@ -147,7 +147,7 @@ def main():
         
         df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
         
-        df_teste = pd.read_csv(caged.csv)
+        df_teste = pd.read_csv('./caged.csv')
         
         st.table(df_teste)
         
