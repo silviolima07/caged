@@ -147,14 +147,14 @@ def main():
         
         df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
         
-        df_teste = pd.read_csv('./caged.csv')
+        df_tab6_1 = pd.read_csv('./caged.csv')
         
-        df_teste = df_teste.loc[df_teste['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
-        df_teste = df_teste.loc[df_teste['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
+        temp1 = df_tab6_1.loc[df_tab_6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
+        df_tab_6_2= temp1.loc[temp1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
 
-        st.table(df_teste)
+        #st.table(df_teste)
         
-        st.table(df_tab6_1[colunas][1:27])
+        st.table(df_tab6_2)
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
