@@ -110,7 +110,7 @@ def main():
     
     mes_final, ano_final = mes_ano_inicial.split('/')
     st.write("Mes do ultimo relatório: "+mes_final)
-    st.write("Ano do ultimo relatório: "+ano_final)
+    #st.write("A do ultimo relatório: "+mes_final)
     
    
     st.subheader("Inicial: "+mes_ano_inicial)
@@ -134,7 +134,7 @@ def main():
               """
     st.markdown(html_page3, unsafe_allow_html=True)
     
-    st.subheader(str(meses[mes_final]+'/'+ano))
+    st.subheader(str(meses[mes]+'/'+ano))
         
     colunas = list(df_tab6_1.columns)
                
