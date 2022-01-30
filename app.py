@@ -101,6 +101,8 @@ def main():
        'Nov':"Novembro", 'Dez': "Dezembro"}
        
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
+    st.write("df_tab6")
+    st.table(df_tab6)
     
     mes_ano = meses[mes]+'/'+ano
     
@@ -113,7 +115,7 @@ def main():
     df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
     
-    st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
+    st.subheader(str(meses[mes]+'/'+ano))
         
     colunas = list(df_tab6_1.columns)
                
