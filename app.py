@@ -112,20 +112,19 @@ def main():
     st.subheader("Relatórios disponibilizados")
     html_page3 = """
     <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>mes_ano_inicial</p>
+        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>Relatório Inicial</p>
     </div>
               """
     st.markdown(html_page3, unsafe_allow_html=True)
+    st.subheader("Inicial: "+mes_ano_inicial)
     
     html_page4 = """
     <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>mes_ano_final</p>
+        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>Relatório Final</p>
     </div>
               """
     st.markdown(html_page4, unsafe_allow_html=True)
-    
-    #st.subheader("Inicial: "+mes_ano_inicial)
-    #st.subheader("Final: "+mes_ano_final)
+    st.subheader("Final: "+mes_ano_final)
     
     
     
