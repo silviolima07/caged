@@ -133,6 +133,9 @@ def main():
        
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
         
+        colunas = df_tab6_1.columns
+        st.write(colunas)
+        
         st.table(df_tab6_1[:27])
         
     elif choice == activities[1]:
