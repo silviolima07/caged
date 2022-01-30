@@ -106,10 +106,13 @@ def main():
     
     colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', mes_ano]
     
-    df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
+    #df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
     
     #df_tab6.drop(columns=['Unnamed: 1_level_1'], level=1, inplace=True)
    
+    df_tab6_1 = df_tab6[colunas].dropna()
+    df_tab6_1[colunas].loc[(df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***') & (df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total') ]
+    
 
     #if choice != 'About':
     #    st.write('Última atualizacao: '+ data_update)
@@ -118,7 +121,7 @@ def main():
        
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
         
-        st.table(df_tab6[colunas][:27])
+        st.table(df_tab6_1)
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
