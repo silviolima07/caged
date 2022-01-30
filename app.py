@@ -143,7 +143,7 @@ def main():
         
         st.write(colunas)
         
-        df_teste = pd.DataFrame(data,colums=['Grupamento de Atividades Econômicas e Seção CNAE 2.0'])
+        df_teste = pd.DataFrame(data,columns=['Grupamento de Atividades Econômicas e Seção CNAE 2.0'])
         
         st.table(df_teste)
         
