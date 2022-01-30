@@ -92,8 +92,6 @@ def main():
 
     mes_ano = meses[mes]+'/'+ano
 
-        
-
     #if choice != 'About':
     #    st.write('Última atualizacao: '+ data_update)
 
