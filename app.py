@@ -74,6 +74,8 @@ def main():
     #soup = BeautifulSoup(resp, parser, from_encoding=resp.info().get_param('charset'))
     #url_tabela='http://pdet.mte.gov.br'
     
+    from lxml import html
+    
     page = requests.get(url_caged)
     webpage = html.fromstring(page.content)
 
