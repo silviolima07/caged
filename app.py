@@ -42,15 +42,15 @@ def main():
 
     # Titulo do web app
     html_page1 = """
-    <div style="background-color:blue;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:red'>Caged</p>
+    <div style="background-color:blue;padding=50px">
+        <p style='text-align:center;font-size:50px;font-weight:bold;color:blue'>CAGED</p>
     </div>
               """
     st.markdown(html_page1, unsafe_allow_html=True)
    
     html_page2 = """
-    <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>Relatõrios</p>
+    <div style="background-color:white;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
     </div>
               """
     st.markdown(html_page2, unsafe_allow_html=True)
@@ -111,16 +111,16 @@ def main():
     mes_ano_inicial = teste_colunas[2][0]
     #st.subheader("Relatórios disponibilizados")
     html_page3 = """
-    <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>Relatório Inicial</p>
+    <div style="background-color:white;padding=30px">
+        <p style='text-align:right;font-size:30px;font-weight:bold;color:blue'>Relatório Inicial</p>
     </div>
               """
     st.markdown(html_page3, unsafe_allow_html=True)
     st.subheader("Inicial: "+mes_ano_inicial)
     
     html_page4 = """
-    <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>Relatório Final</p>
+    <div style="background-color:white;padding=30px">
+        <p style='text-align:right;font-size:30px;font-weight:bold;color:blue'>Relatório Final</p>
     </div>
               """
     st.markdown(html_page4, unsafe_allow_html=True)
