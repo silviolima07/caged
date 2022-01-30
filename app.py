@@ -103,8 +103,7 @@ def main():
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
     mes_ano = meses[mes]+'/'+ano
-    
-    st.table(df_tab6[mes_ano][0:27])
+   
 
     #if choice != 'About':
     #    st.write('Última atualizacao: '+ data_update)
@@ -112,7 +111,8 @@ def main():
     if choice == activities[0]:
        
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
-        st.table(df_tab6[mes_ano])
+        
+        st.table(df_tab6[mes_ano][0:27])
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
