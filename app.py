@@ -95,10 +95,10 @@ def main():
        'Nov':"Novembro", 'Dez': "Dezembro"}
        
     mesano = url_tabela.split('/')[5]
-    mes = mesano[0:3]
-    ano = mesano[3:]
+    mes_final = mesano[0:3]
+    ano_final = mesano[3:]
     
-    mes_ano_final = meses[mes]+'/'+ano
+    mes_ano_final = meses[mes_final]+'/'+ano_final
     
     
        
@@ -107,9 +107,14 @@ def main():
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
+    
+    mes_final, ano_final = mes_ano_inicial.split('/')
+    st.write("Mes do ultimo relatório: "+mes_final)
+    st.write("Ano do ultimo relatório: "+ano_final)
+    
    
     st.subheader("Inicial: "+mes_ano_inicial)
-    st.subheader("Atual: "+mes_ano_final)
+    st.subheader("  Atual: "+mes_ano_final)
     
     
     
