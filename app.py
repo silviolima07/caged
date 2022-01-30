@@ -50,14 +50,12 @@ def main():
    
     html_page2 = """
     <div style="background-color:white;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
+        <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
     </div>
               """
     st.markdown(html_page2, unsafe_allow_html=True)
 
     activities = ["Home",'Gráficos',"About"]
-    #file_csv = ['CSV/indeed_Cientista_de_dados.csv','CSV/indeed_Analista_de_dados.csv', 'CSV/indeed_Engenheiro_de_Machine_Learning.csv',
-    #            'CSV/indeed_Engenheiro_de_Dados.csv']
     choice = st.sidebar.selectbox("Selecione uma opção",activities)
 
     # Definir a data da última atualização
@@ -126,7 +124,7 @@ def main():
     
     html_page3 = """
     <div style="background-color:blue;padding=40px">
-        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>ATUAL</p>
+        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Atual</p>
     </div>
               """
     st.markdown(html_page3, unsafe_allow_html=True)
