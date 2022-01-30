@@ -124,7 +124,9 @@ def main():
      
     opcao_ano = st.selectbox(
      'Selecione o ano de interesse',lista_anos)
-     
+    
+    st.write("Opcao_ano: "+opcao_ano)
+        
     st.write(opcao_mes+'/'+opcao_ano)
 
         
