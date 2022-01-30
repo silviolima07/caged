@@ -43,7 +43,7 @@ def main():
     # Titulo do web app
     html_page1 = """
     <div style="background-color:blue;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>Caged</p>
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:red'>Caged</p>
     </div>
               """
     st.markdown(html_page1, unsafe_allow_html=True)
@@ -109,7 +109,7 @@ def main():
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
-    st.subheader("Relatórios disponibilizados")
+    #st.subheader("Relatórios disponibilizados")
     html_page3 = """
     <div style="background-color:white;padding=20px">
         <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>Relatório Inicial</p>
