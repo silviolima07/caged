@@ -115,7 +115,7 @@ def main():
     lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
-                   meses['Out'], meses['Nov'], meses['Dezembro']
+                   meses['Out'], meses['Nov'], meses['Dezembro']]
     lista_anos = [ano_inicial, ano_final]
     
     opcao_mes = st.selectbox(
