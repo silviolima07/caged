@@ -104,7 +104,7 @@ def main():
     
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
-    st.write(teste_colunas[1])
+    st.write(teste_colunas[2])
     st.table(df_teste)
     
     mes_ano = meses[mes]+'/'+ano
