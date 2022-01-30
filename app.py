@@ -117,7 +117,7 @@ def main():
                    'Abril', 'Maio', 'Junho'
                    'Julho', 'Agosto', 'Setembro',
                    'Outubro', 'Novembro','Dezembro']
-    lista_anos = [2020, 2021,2022, 2023,2024,2025]
+    lista_anos = ['2020', '2021','2022', '2023','2024','2025']
     
     opcao_mes = st.selectbox(
      'Selecione o mês de interesse',lista_meses)
@@ -125,7 +125,7 @@ def main():
     opcao_ano = st.selectbox(
      'Selecione o ano de interesse',lista_anos)
      
-    st.write(opcao_mes+'/'+str(opcao_ano))
+    st.write(opcao_mes+'/'+opcao_ano)
 
         
     
