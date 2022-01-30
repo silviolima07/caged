@@ -101,8 +101,10 @@ def main():
        'Nov':"Novembro", 'Dez': "Dezembro"}
        
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
-    st.write("df_tab6")
-    st.table(df_tab6)
+    
+    df_teste = df_tab6[colunas].dropna()
+    st.write("df_teste")
+    st.table(df_teste)
     
     mes_ano = meses[mes]+'/'+ano
     
