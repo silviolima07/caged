@@ -122,7 +122,10 @@ def main():
     opcao_mes = st.selectbox(
      'Selecione o mês de interesse',lista_meses)
      
-    st.write(opcao_mes)
+     opcao_ano = st.selectbox(
+     'Selecione o ano de interesse',lista_anos)
+     
+    st.write(opcao_mes+'/'+opcao_ano)
 
         
     
