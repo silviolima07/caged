@@ -41,19 +41,19 @@ def main():
     """Indeed App """
 
     # Titulo do web app
-    html_page = """
+    html_page1 = """
     <div style="background-color:blue;padding=30px">
         <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>Caged</p>
     </div>
               """
-    st.markdown(html_page, unsafe_allow_html=True)
+    st.markdown(html_page1, unsafe_allow_html=True)
    
-    html_page = """
+    html_page2 = """
     <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>Saldo de Contratações e Demissões</p>
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:blue'>Relatõrios</p>
     </div>
               """
-    st.markdown(html_page, unsafe_allow_html=True)
+    st.markdown(html_page2, unsafe_allow_html=True)
 
     activities = ["Home",'Gráficos',"About"]
     #file_csv = ['CSV/indeed_Cientista_de_dados.csv','CSV/indeed_Analista_de_dados.csv', 'CSV/indeed_Engenheiro_de_Machine_Learning.csv',
@@ -110,8 +110,22 @@ def main():
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
     st.subheader("Relatórios disponibilizados")
-    st.subheader("Inicial: "+mes_ano_inicial)
-    st.subheader("Final: "+mes_ano_final)
+    html_page3 = """
+    <div style="background-color:white;padding=20px">
+        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>mes_ano_inicial</p>
+    </div>
+              """
+    st.markdown(html_page3, unsafe_allow_html=True)
+    
+    html_page4 = """
+    <div style="background-color:white;padding=20px">
+        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>mes_ano_final</p>
+    </div>
+              """
+    st.markdown(html_page4, unsafe_allow_html=True)
+    
+    #st.subheader("Inicial: "+mes_ano_inicial)
+    #st.subheader("Final: "+mes_ano_final)
     
     
     
