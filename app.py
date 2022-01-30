@@ -89,10 +89,6 @@ def main():
             url_tabela = url_tabela+str(link)
     
     
-    mesano = url_tabela.split('/')[5]
-    mes = mesano[0:3]
-    ano = mesano[3:]
-    
     meses={'jan':'Janeiro', 'Fev':"Fevereiro",
        'Mar':'Março', 'Abr': 'Abril',
        'Mai': 'Maio', 'Jun':'Junho',
@@ -100,16 +96,26 @@ def main():
        'Set': 'Setembro', 'Out':"Outubro",
        'Nov':"Novembro", 'Dez': "Dezembro"}
        
+    mesano = url_tabela.split('/')[5]
+    mes = mesano[0:3]
+    ano = mesano[3:]
+    
+    mes_ano_final = meses[mes]+'/'+ano
+    
+    
+       
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
-    st.write(mes_ano_inicial)
+    st.markdown("Relatórios disponibilizados")
+    st.markdown("Inicial: "+mes_ano_inicial)
+    st,markdown("Final: "+mes_ano_final)
     
-    mes_ano = meses[mes]+'/'+ano
     
-    colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', mes_ano]
+    
+    colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', mes_ano_final]
     
     df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
    
