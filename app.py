@@ -140,12 +140,12 @@ def main():
     
     html_page3 = """
     <div style="background-color:blue;padding=40px">
-        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Relatório Atual</p>
+        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Relatório</p>
     </div>
               """
     st.markdown(html_page3, unsafe_allow_html=True)
     
-    #st.subheader(str(meses[mes]+'/'+ano))
+    st.subheader(filtro_mes_ano)
         
     colunas = list(df_tab6_1.columns)
                
