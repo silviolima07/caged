@@ -147,7 +147,7 @@ def main():
               """
     st.markdown(html_page3, unsafe_allow_html=True)
     
-    st.table(df_tab6_1)# TESTE
+    #st.table(df_tab6_1)# TESTE
     
     st.subheader(filtro_mes_ano)
         
