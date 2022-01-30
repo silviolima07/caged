@@ -151,6 +151,7 @@ def main():
         
         temp1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
         df_tab6_2= temp1.loc[temp1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
+        df_tab6_2.reset_index()
 
         #st.table(df_teste)
         
