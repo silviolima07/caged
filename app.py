@@ -124,7 +124,8 @@ def main():
     opcao_ano = st.selectbox(
      'Ano de interesse',lista_anos)
     
-    st.write("Pesquisar: "+opcao_mes+'/'+opcao_ano)
+    st.write("Pesquisar")
+    st.write("--> "+opcao_mes+'/'+opcao_ano)
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
