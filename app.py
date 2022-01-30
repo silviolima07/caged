@@ -130,7 +130,7 @@ def main():
     
     html_page3 = """
     <div style="background-color:blue;padding=40px">
-        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Atual</p>
+        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Relatório Atual</p>
     </div>
               """
     st.markdown(html_page3, unsafe_allow_html=True)
