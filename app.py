@@ -110,8 +110,8 @@ def main():
     
     mes_inicial, ano_inicial = mes_ano_inicial.split('/')
     
-    st.subheader("Mês Inicial  -> "+mes_inicial)
-    st.subheader("Ano Inicial  -> "+ano_inicial)
+    #st.subheader("Mês Inicial  -> "+mes_inicial)
+    #st.subheader("Ano Inicial  -> "+ano_inicial)
     
     lista_meses = ['Janeiro', 'Fevereiro', 'Março',
                    'Abril', 'Maio', 'Junho'
@@ -125,7 +125,7 @@ def main():
     opcao_ano = st.selectbox(
      'Selecione o ano de interesse',lista_anos)
      
-    st.write(opcao_mes+'/'+opcao_ano)
+    st.write(opcao_mes+'/'+str(opcao_ano))
 
         
     
