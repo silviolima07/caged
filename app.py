@@ -66,8 +66,7 @@ def main():
     #f = open("update", "r")
     #data_update = f.read()
     
-    url_caged = "http://pdet.mte.gov.br/novo-caged"
-    url_tabela= 'http://pdet.mte.gov.br'
+    
 
     #parser = 'html.parser'  # or 'lxml' (preferred) or 'html5lib', if installed
     #resp = urllib.request.urlopen(url_caged)
@@ -76,14 +75,17 @@ def main():
     
     from lxml import html
     
+    url_caged = "http://pdet.mte.gov.br/novo-caged"
+    url_tabela= 'http://pdet.mte.gov.br'
+    
     page = requests.get(url_caged)
     webpage = html.fromstring(page.content)
 
     
     for link in webpage.xpath('//a/@href'):
         if "tabelas.xlsx" in link:
-            print("Link:",link)
-            print("Url tabela: ", url_tabela+str(link))
+            #print("Link:",link)
+            #print("Url tabela: ", url_tabela+str(link))
             url_tabela = url_tabela+str(link)
     
     
@@ -99,6 +101,8 @@ def main():
        'Nov':"Novembro", 'Dez': "Dezembro"}
        
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
+    
+    st.table(df_tab6)
 
     mes_ano = meses[mes]+'/'+ano
 
