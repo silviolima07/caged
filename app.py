@@ -103,6 +103,8 @@ def main():
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
     mes_ano = meses[mes]+'/'+ano
+    
+    colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', mes_ano]
    
 
     #if choice != 'About':
@@ -112,7 +114,7 @@ def main():
        
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
         
-        st.table(df_tab6[mes_ano][:27])
+        st.table(df_tab6[colunas][:27])
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
