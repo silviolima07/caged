@@ -109,22 +109,10 @@ def main():
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
-    #st.subheader("Relatórios disponibilizados")
-    html_page3 = """
-    <div style="background-color:white;padding=30px">
-        <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatório Inicial</p>
-    </div>
-              """
-    st.markdown(html_page3, unsafe_allow_html=True)
-    st.subheader("Inicial: "+mes_ano_inicial)
-    
-    html_page4 = """
-    <div style="background-color:white;padding=30px">
-        <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatório Final</p>
-    </div>
-              """
-    st.markdown(html_page4, unsafe_allow_html=True)
-    st.subheader("Final: "+mes_ano_final)
+   
+    st.subheader(mes_ano_inicial)
+    st.subheader("a")
+    st.subheader(mes_ano_final)
     
     
     
