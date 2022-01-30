@@ -147,7 +147,7 @@ def main():
         
         st.table(df_teste)
         
-        st.table(df_tab6_1[colunas][:27])
+        #st.table(df_tab6_1[colunas][:27])
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
