@@ -109,9 +109,9 @@ def main():
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
-    st.markdown("Relatórios disponibilizados")
-    st.markdown("Inicial: "+mes_ano_inicial)
-    st,markdown("Final: "+mes_ano_final)
+    st.subheader("Relatórios disponibilizados")
+    st.subheader("Inicial: "+mes_ano_inicial)
+    st.subheader("Final: "+mes_ano_final)
     
     
     
