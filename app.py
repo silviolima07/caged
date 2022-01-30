@@ -119,7 +119,10 @@ def main():
     
     df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
-    st.write(df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"])
+    df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'].replace({"---": 9999}, inplace=True)
+print(df)
+    
+    #st.write(df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"])
     
 
 
