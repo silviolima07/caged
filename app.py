@@ -100,7 +100,19 @@ def main():
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
+    lista_meses = ['Janeiro', 'Fevereiro', 'Março',
+                   'Abril', 'Maio', 'Junho',
+                   'Julho', 'Agosto', 'Setembro',
+                   'Outubro', 'Novembro','Dezembro']
+    lista_anos = ['2020', '2021','2022', '2023','2024','2025']
     
+    opcao_mes = st.selectbox(
+     'Selecione o mês de interesse',lista_meses)
+     
+    opcao_ano = st.selectbox(
+     'Selecione o ano de interesse',lista_anos)
+    
+    st.write("Pesquisar: "+opcao_mes+'/'+opcao_ano)
        
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
@@ -113,29 +125,8 @@ def main():
     st.subheader("Inicial  -> "+mes_ano_inicial)
     st.subheader("  Atual  -> "+mes_ano_final)
     
-    lista_meses = ['Janeiro', 'Fevereiro', 'Março',
-                   'Abril', 'Maio', 'Junho'
-                   'Julho', 'Agosto', 'Setembro',
-                   'Outubro', 'Novembro','Dezembro']
-    lista_anos = ['2020', '2021','2022', '2023','2024','2025']
     
-    opcao_mes = st.selectbox(
-     'Selecione o mês de interesse',lista_meses)
-     
-    opcao_ano = st.selectbox(
-     'Selecione o ano de interesse',lista_anos)
-    
-    st.write("Pesquisar: "+opcao_mes+'/'+opcao_ano)
         
-
-        
-    
-    
-   
-    
-    
-    
-    
     colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', mes_ano_final]
     
     df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
