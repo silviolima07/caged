@@ -118,6 +118,10 @@ def main():
     #df_tab6_1[colunas].loc[(df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***') & (df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total') ]
     
     df_tab6_1.columns = df_tab6_1.columns.droplevel()
+    
+    st.write(df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"])
+    
+
 
     #if choice != 'About':
     #    st.write('Última atualizacao: '+ data_update)
