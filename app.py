@@ -104,7 +104,7 @@ def main():
     
     mes_ano = meses[mes]+'/'+ano
     
-    st.table(df_tab6[mes_ano])
+    st.table(df_tab6[mes_ano][0:27])
 
     #if choice != 'About':
     #    st.write('Última atualizacao: '+ data_update)
