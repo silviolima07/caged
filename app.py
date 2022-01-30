@@ -14,9 +14,10 @@ import sys
 
 import numpy as np
 import requests
-import io
-from bs4 import BeautifulSoup
-import urllib.request
+
+from lxml import html
+
+
 
 
 def download_link(df, texto1, texto2):
@@ -66,15 +67,22 @@ def main():
     #data_update = f.read()
     
     url_caged = "http://pdet.mte.gov.br/novo-caged"
-    parser = 'html.parser'  # or 'lxml' (preferred) or 'html5lib', if installed
-    resp = urllib.request.urlopen(url_caged)
-    soup = BeautifulSoup(resp, parser, from_encoding=resp.info().get_param('charset'))
-    url_tabela='http://pdet.mte.gov.br'
-    for link in soup.find_all('a', href=True):
-        if "tabelas.xlsx" in link['href']:
+    url_tabela= 'http://pdet.mte.gov.br'
+
+    #parser = 'html.parser'  # or 'lxml' (preferred) or 'html5lib', if installed
+    #resp = urllib.request.urlopen(url_caged)
+    #soup = BeautifulSoup(resp, parser, from_encoding=resp.info().get_param('charset'))
+    #url_tabela='http://pdet.mte.gov.br'
+    
+    page = requests.get(url_caged)
+    webpage = html.fromstring(page.content)
+
+    
+    for link in webpage.xpath('//a/@href'):
+        if "tabelas.xlsx" in link:
             print("Link:",link['href'])
-            print("Url tabela: ", url_caged+str(link['href']))
-            url_tabela = url_tabela+str(link['href'])
+            print("Url tabela: ", url_tabela+str(link))
+            url_tabela = url_tabela+str(link)
     
     
     mesano = url_tabela.split('/')[5]
