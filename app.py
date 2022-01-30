@@ -128,7 +128,7 @@ def main():
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
-    filtro_mes_ano = 'Janeiro/2020'
+    st.header("MES/ANO "+filtro_mes_ano)
     
         
     colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', filtro_mes_ano]
