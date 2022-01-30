@@ -124,6 +124,13 @@ def main():
     df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
     
+    html_page3 = """
+    <div style="background-color:blue;padding=30px">
+        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>Atual</p>
+    </div>
+              """
+    st.markdown(html_page3, unsafe_allow_html=True)
+    
     st.subheader(str(meses[mes]+'/'+ano))
         
     colunas = list(df_tab6_1.columns)
