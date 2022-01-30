@@ -107,54 +107,27 @@ def main():
     colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', mes_ano]
     
     df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
-    
-    #df_tab6.columns = df_tab6.columns.droplevel(0)
-    
-    #df_tab6.drop(columns=['Unnamed: 1_level_1'], level=1, inplace=True)
    
     df_tab6_1 = df_tab6[colunas].dropna()
-    #df_tab6_2 = df_tab6_1[colunas].loc[(df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***') & (df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total') ]
-    #df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"]
-    #df_tab6_1 = df_tab6_1[colunas].loc[(df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***') & (df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total') ]
-    
+ 
     df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
-    #df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'].replace({"---": 9999}, inplace=True)
     
+    st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
+        
+    colunas = list(df_tab6_1.columns)
+               
+    df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
+        
+    df_tab6_1 = pd.read_csv('./caged.csv')
+        
+    temp1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
+    df_tab6_2= temp1.loc[temp1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
+        
+    df_tab6_2.to_csv("caged.csv", index=False, header=colunas)
     
-    #df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"])
-    
-
-
-    #if choice != 'About':
-    #    st.write('Última atualizacao: '+ data_update)
-
     if choice == activities[0]:
-       
-        st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
-        
-        colunas = list(df_tab6_1.columns)
-        
-        #data = { 'Grupamento de Atividades Econômicas e Seção CNAE 2.0':df_tab6_1[1:]}
-        
-        
-        
-        #df_tab6_1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"]
-        
-        #st.write(colunas)
-        
-        #df_teste = pd.DataFrame(data,columns=['Grupamento de Atividades Econômicas e Seção CNAE 2.0'])
-        
-        df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
-        
-        df_tab6_1 = pd.read_csv('./caged.csv')
-        
-        temp1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
-        df_tab6_2= temp1.loc[temp1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
-        df_tab6_2.reset_index()
-
-        #st.table(df_teste)
-        
+    
         st.table(df_tab6_2)
         
     elif choice == activities[1]:
@@ -163,7 +136,7 @@ def main():
         #total = str(len(df))
         st.title(activities[1])
         st.subheader("Gráficos")
-        st.table(df)
+        st.table(df_tab6_2)
 
         
         # link is the column with hyperlinks
