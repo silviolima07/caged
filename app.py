@@ -98,6 +98,18 @@ def main():
     mes_final = mesano[0:3]
     ano_final = mesano[3:]
     
+       
+    df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
+    
+    df_teste = df_tab6.dropna()
+    teste_colunas = df_teste.columns
+    mes_ano_inicial = teste_colunas[2][0]
+    
+    mes_inicial, ano_inicial = mes_ano_inicial.split('/')
+    
+    st.subheader("Inicial  -> "+mes_ano_inicial)
+    st.subheader("  Atual  -> "+mes_ano_final)
+    
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
     lista_meses = ['Janeiro', 'Fevereiro', 'Março',
@@ -113,17 +125,6 @@ def main():
      'Selecione o ano de interesse',lista_anos)
     
     st.write("Pesquisar: "+opcao_mes+'/'+opcao_ano)
-       
-    df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
-    
-    df_teste = df_tab6.dropna()
-    teste_colunas = df_teste.columns
-    mes_ano_inicial = teste_colunas[2][0]
-    
-    mes_inicial, ano_inicial = mes_ano_inicial.split('/')
-    
-    st.subheader("Inicial  -> "+mes_ano_inicial)
-    st.subheader("  Atual  -> "+mes_ano_final)
     
     
         
