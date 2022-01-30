@@ -87,7 +87,7 @@ def main():
             url_tabela = url_tabela+str(link)
     
     
-    meses={'jan':'Janeiro', 'Fev':"Fevereiro",
+    meses={'Jan':'Janeiro', 'Fev':"Fevereiro",
        'Mar':'Março', 'Abr': 'Abril',
        'Mai': 'Maio', 'Jun':'Junho',
        'Jul':'Julho', 'Ago': 'Agosto',
@@ -112,10 +112,10 @@ def main():
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
-    lista_meses = [meses['jan'], 'Fevereiro', 'Março',
-                   'Abril', 'Maio', 'Junho',
-                   'Julho', 'Agosto', 'Setembro',
-                   'Outubro', 'Novembro','Dezembro']
+    lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
+                   meses['Abr'], meses['Mai'], meses['Jun'],
+                   meses['Jul'], meses['Ago'], meses['Set'],
+                   meses['Out'], meses['Nov'], meses['Dezembro']
     lista_anos = [ano_inicial, ano_final]
     
     opcao_mes = st.selectbox(
