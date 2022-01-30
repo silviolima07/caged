@@ -12,6 +12,12 @@ import base64
 
 import sys
 
+import numpy as np
+import requests
+import io
+from bs4 import BeautifulSoup
+import urllib.request
+
 
 def download_link(df, texto1, texto2):
     if isinstance(df,pd.DataFrame):
@@ -22,7 +28,12 @@ def download_link(df, texto1, texto2):
 
     return f'<a href="data:file/txt;base64,{b64}" download="{texto1}">{texto2}</a>'
 
-    
+def excel_to_pandas2(URL, local_path, sheet, header):
+    resp = requests.get(URL)
+    with open(local_path, 'wb') as output:
+        output.write(resp.content)
+    df = pd.read_excel(local_path,sheet_name=sheet,header=header)
+    return df    
 
 def main():
 
@@ -51,15 +62,45 @@ def main():
     # Definir a data da última atualização
 
 
-    f = open("update", "r")
-    data_update = f.read()
-   
-    if choice != 'About':
-        st.write('Última atualizacao: '+ data_update)
+    #f = open("update", "r")
+    #data_update = f.read()
+    
+    url_caged = "http://pdet.mte.gov.br/novo-caged"
+    parser = 'html.parser'  # or 'lxml' (preferred) or 'html5lib', if installed
+    resp = urllib.request.urlopen(url_caged)
+    soup = BeautifulSoup(resp, parser, from_encoding=resp.info().get_param('charset'))
+    url_tabela='http://pdet.mte.gov.br'
+    for link in soup.find_all('a', href=True):
+        if "tabelas.xlsx" in link['href']:
+            print("Link:",link['href'])
+            print("Url tabela: ", url_caged+str(link['href']))
+            url_tabela = url_tabela+str(link['href'])
+    
+    
+    mesano = url_tabela.split('/')[5]
+    mes = mesano[0:3]
+    ano = mesano[3:]
+    
+    meses={'jan':'Janeiro', 'Fev':"Fevereiro",
+       'Mar':'Março', 'Abr': 'Abril',
+       'Mai': 'Maio', 'Jun':'Junho',
+       'Jul':'Julho', 'Ago': 'Agosto',
+       'Set': 'Setembro', 'Out':"Outubro",
+       'Nov':"Novembro", 'Dez': "Dezembro"}
+       
+    df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
+
+    mes_ano = meses[mes]+'/'+ano
+
+        
+
+    #if choice != 'About':
+    #    st.write('Última atualizacao: '+ data_update)
 
     if choice == activities[0]:
        
-        print("Dados do Caged")
+        st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
+        st.table(df_tab6[mes_ano])
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
