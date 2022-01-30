@@ -133,21 +133,21 @@ def main():
        
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
         
-        colunas = list(df_tab6_1.columns)
+        #colunas = list(df_tab6_1.columns)
         
-        data = { 'Grupamento de Atividades Econômicas e Seção CNAE 2.0':df_tab6_1[1:]}
+        #data = { 'Grupamento de Atividades Econômicas e Seção CNAE 2.0':df_tab6_1[1:]}
         
         
         
         #df_tab6_1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"]
         
-        st.write(colunas)
+        #st.write(colunas)
         
-        df_teste = pd.DataFrame(data,columns=['Grupamento de Atividades Econômicas e Seção CNAE 2.0'])
+        #df_teste = pd.DataFrame(data,columns=['Grupamento de Atividades Econômicas e Seção CNAE 2.0'])
         
-        st.table(df_teste)
+        #st.table(df_teste)
         
-        #st.table(df_tab6_1[colunas][:27])
+        st.table(df_tab6_1[colunas][:27])
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
