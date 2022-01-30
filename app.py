@@ -134,8 +134,7 @@ def main():
         #st.sidebar.image(aguia1,caption="", width=300)
         #df = pd.read_csv(file_csv[0])
         #total = str(len(df))
-        st.title(activities[1])
-        st.subheader("Gráficos")
+        #st.title(activities[1])
         st.table(df_tab6_2)
 
         
