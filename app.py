@@ -135,7 +135,12 @@ def main():
         
         colunas = list(df_tab6_1.columns)
         
-        df_tab6_1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"]
+        #data = { 'Grupamento de Atividades Econômicas e Seção CNAE 2.0':[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'],
+        #         '
+        
+        #df_teste = pd.DataFrame(
+        
+        #df_tab6_1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"]
         
         
         st.table(df_tab6_1[colunas][:])
