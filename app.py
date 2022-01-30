@@ -110,7 +110,7 @@ def main():
     
     mes_inicial, ano_inicial = mes_ano_inicial.split('/')
     
-    st.subheader("Mês Inicial  -> "+ano_inicial)
+    st.subheader("Mês Inicial  -> "+mes_inicial)
     
     
    
