@@ -119,16 +119,17 @@ def main():
     lista_anos = [ano_inicial, ano_final]
     
     opcao_mes = st.selectbox(
-     'Selecione o mês de interesse',lista_meses)
+     'Mês de interesse',lista_meses)
      
     opcao_ano = st.selectbox(
-     'Selecione o ano de interesse',lista_anos)
+     'Ano de interesse',lista_anos)
     
     st.write("Pesquisar: "+opcao_mes+'/'+opcao_ano)
     
+    filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
         
-    colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', mes_ano_final]
+    colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', filtro_mes_ano]
     
     df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
    
