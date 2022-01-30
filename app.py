@@ -114,7 +114,7 @@ def main():
    
     df_tab6_1 = df_tab6[colunas].dropna()
     #df_tab6_2 = df_tab6_1[colunas].loc[(df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***') & (df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total') ]
-    #df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"]
+    df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != "---"]
     #df_tab6_1[colunas].loc[(df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***') & (df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total') ]
     
 
@@ -125,8 +125,7 @@ def main():
        
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
         
-        #st.table(df_tab6[:])
-        st.write(df_tab6)
+        st.table(df_tab6_1[:])
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
