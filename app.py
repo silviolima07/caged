@@ -82,7 +82,7 @@ def main():
     
     for link in webpage.xpath('//a/@href'):
         if "tabelas.xlsx" in link:
-            print("Link:",link['href'])
+            print("Link:",link)
             print("Url tabela: ", url_tabela+str(link))
             url_tabela = url_tabela+str(link)
     
