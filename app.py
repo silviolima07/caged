@@ -134,7 +134,7 @@ def main():
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
         
         colunas = df_tab6_1.columns
-        st.write(colunas)
+        st.write(colunas[1:])
         
         st.table(df_tab6_1[:27])
         
