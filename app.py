@@ -108,7 +108,7 @@ def main():
     
     df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
     
-    df_tab6.columns = df_tab6.columns.droplevel(0)
+    #df_tab6.columns = df_tab6.columns.droplevel(0)
     
     #df_tab6.drop(columns=['Unnamed: 1_level_1'], level=1, inplace=True)
    
