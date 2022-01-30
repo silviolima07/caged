@@ -125,7 +125,8 @@ def main():
        
         st.subheader("Mês/Ano: "+str(meses[mes]+'/'+ano))
         
-        st.table(df_tab6[:])
+        #st.table(df_tab6[:])
+        st.table(df_tab6)
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
