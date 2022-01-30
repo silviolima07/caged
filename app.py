@@ -112,7 +112,7 @@ def main():
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
-    lista_meses = ['Janeiro', 'Fevereiro', 'Março',
+    lista_meses = [meses['jan'], 'Fevereiro', 'Março',
                    'Abril', 'Maio', 'Junho',
                    'Julho', 'Agosto', 'Setembro',
                    'Outubro', 'Novembro','Dezembro']
@@ -128,9 +128,6 @@ def main():
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
-    st.header("MES/ANO "+filtro_mes_ano)
-    
-        
     colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', filtro_mes_ano]
     
     df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
