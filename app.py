@@ -102,9 +102,9 @@ def main():
        
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
-    st.table(df_tab6)
-
     mes_ano = meses[mes]+'/'+ano
+    
+    st.table(df_tab6[mes_ano)
 
     #if choice != 'About':
     #    st.write('Última atualizacao: '+ data_update)
