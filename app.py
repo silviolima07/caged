@@ -145,9 +145,13 @@ def main():
         
         #df_teste = pd.DataFrame(data,columns=['Grupamento de Atividades Econômicas e Seção CNAE 2.0'])
         
-        #st.table(df_teste)
+        df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
         
-        st.table(df_tab6_1[colunas][:27])
+        df_teste = pd.read_csv(caged.csv)
+        
+        st.table(df_teste)
+        
+        st.table(df_tab6_1[colunas][1:27])
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
