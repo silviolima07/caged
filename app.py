@@ -112,8 +112,8 @@ def main():
     
     
    
-    st.subheader("Inicial: "+mes_ano_inicial)
-    st.subheader("  Atual: "+mes_ano_final)
+    st.subheader("Inicial: -> "+mes_ano_inicial)
+    st.subheader("  Atual: -> "+mes_ano_final)
     
     
     
