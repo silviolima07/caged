@@ -116,7 +116,7 @@ def main():
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
                    meses['Out'], meses['Nov'], meses['Dez']]
-    lista_anos = [ano_inicial, '2020']
+    lista_anos = [ano_inicial, ano_final]
     
     opcao_mes = st.selectbox(
      'Mês de interesse',lista_meses)
@@ -163,6 +163,7 @@ def main():
     if choice == activities[0]:
     
         st.table(df_tab6_2)
+        download_link(df_tab6_2,"TESTE1","TESTE2")
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
