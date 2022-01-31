@@ -135,7 +135,7 @@ def main():
      'ANO',lista_anos)
     
 
-    st.write("--> "+opcao_mes+'/'+opcao_ano)
+    st.subheader(+opcao_mes+'/'+opcao_ano)
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
@@ -197,13 +197,13 @@ def main():
         
     temp1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
     df_tab6_2= temp1.loc[temp1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
-        
-    df_tab6_2.to_csv("caged.csv", index=False, header=colunas)
+    """    
+    df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
     
     with open('caged.csv', encoding="latin-1") as f:
         nome = 'caged_'+opcao_mes+'_'+opcao_ano+'.csv'
         st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
-    """
+    
     if choice == activities[0]:
          st.write("TESTE")
         #st.table(df_tab6_2.style.format('{:7,.1}'))
