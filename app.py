@@ -145,7 +145,7 @@ def main():
    
     df_tab6 = df_tab6.fillna("Sem informação")
     
-    st.write(df_tab6.columns.levels[1])
+    st.write(df_tab6.columns.levels[0])
     
     #df_tab6.columns = df_tab6.columns.droplevel(0)
     #df_tab6.columns = [col[0] for col in df_tab6.columns]    Quase
