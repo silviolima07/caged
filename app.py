@@ -108,8 +108,8 @@ def main():
     
     mes_inicial, ano_inicial = mes_ano_inicial.split('/')
     
-    st.subheader("Inicial  -> "+mes_inicial+'/'+ano_inicial+"    Atual  -> "+meses[mes_final]+'/'+ano_final)
-    #st.subheader("  Atual  -> "+meses[mes_final]+'/'+ano_final)
+    st.subheader("Inicial  -> "+mes_inicial+'/'+ano_inicial)
+    st.markdown("  Atual  -> "+meses[mes_final]+'/'+ano_final)
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
