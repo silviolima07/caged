@@ -159,7 +159,8 @@ def main():
         
     colunas = list(df_tab6_1.columns)
     
-    st.write("Colunas: "+colunas)
+    st.write("Colunas")
+    st.write(colunas)
                
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
         
