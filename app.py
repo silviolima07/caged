@@ -154,7 +154,7 @@ def main():
                
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
         
-    df_tab6_1 = pd.read_csv('./caged.csv', encoding='ISO-8859-1')
+    df_tab6_1 = pd.read_csv('./caged.csv', encoding='utf-8')
         
     temp1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
     df_tab6_2= temp1.loc[temp1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
@@ -168,7 +168,6 @@ def main():
     if choice == activities[0]:
     
         st.table(df_tab6_2)
-        download_link(df_tab6_2,"TESTE1","TESTE2")
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
