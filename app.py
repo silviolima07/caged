@@ -119,7 +119,7 @@ def main():
                    meses['Out'], meses['Nov'], meses['Dez']]
     lista_anos = [ano_inicial, ano_final]
     
-    st.suheader("Pesquisar")
+    st.subheader("Pesquisar")
     opcao_mes = st.selectbox(
      'MÊS',lista_meses)
      
