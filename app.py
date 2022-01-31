@@ -162,10 +162,12 @@ def main():
     
     st.subheader(filtro_mes_ano)
         
-    colunas = list(df_tab6_1.columns)
+    #colunas = list(df_tab6_1.columns)
     
-    if ("Variação Relativa (%)" in colunas and filtro_mes_ano == 'Janeiro/2020'):
+    if (filtro_mes_ano == 'Janeiro/2020'):
         colunas = list(df_tab6_1.columns)[:-1]
+    else:
+        colunas = list(df_tab6_1.columns)
     
     st.write("Colunas")
     st.write(colunas)
