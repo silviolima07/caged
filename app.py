@@ -108,12 +108,12 @@ def main():
     mes_ano_inicial = teste_colunas[2][0]
     
     mes_inicial, ano_inicial = mes_ano_inicial.split('/')
-    """
+    
     st.subheader("Inicial  -> "+mes_inicial+'/'+ano_inicial)
     st.subheader("  Atual  -> "+meses[mes_final]+'/'+ano_final)
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
-    """
+    
     lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
