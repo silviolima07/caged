@@ -154,7 +154,7 @@ def main():
                
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas, encoding="utf-8")
         
-    df_tab6_1 = pd.read_csv('./caged.csv')
+    df_tab6_1 = pd.read_csv('./caged.csv', encoding="utf-8")
         
     temp1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
     df_tab6_2= temp1.loc[temp1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
