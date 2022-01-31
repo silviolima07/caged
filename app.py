@@ -154,6 +154,8 @@ def main():
     
     #df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
+    df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
+    
     st.write(df_tab6_1.columns)
     
     st.table(df_tab6_1) # TESTE
