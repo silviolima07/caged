@@ -112,7 +112,7 @@ def main():
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
-    lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
+    lista_meses = [meses['Jan'], meses['Jan'], meses['Mar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
                    meses['Out'], meses['Nov'], meses['Dez']]
