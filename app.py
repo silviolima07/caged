@@ -135,7 +135,7 @@ def main():
      'ANO',lista_anos)
     
 
-    #st.write("--> "+opcao_mes+'/'+opcao_ano)
+    st.write("--> "+opcao_mes+'/'+opcao_ano)
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
@@ -156,7 +156,7 @@ def main():
     
     df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
     
-    st.write(df_tab6_1.columns)
+    #st.write(df_tab6_1.columns)
     
     st.table(df_tab6_1) # TESTE
     
