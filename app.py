@@ -160,9 +160,9 @@ def main():
     
     st.table(df_tab6_1) # TESTE
     
-    df_tab6_1.to_csv("caged.csv", index=False, encoding='utf-8')
+    df_tab6_1.to_csv("caged.csv", index=False, encoding='utf-16')
     
-    with open('caged.csv', encoding="utf-8") as f:
+    with open('caged.csv') as f:
         nome = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
         st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
     
