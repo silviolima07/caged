@@ -144,6 +144,9 @@ def main():
    
     df_tab6_1 = df_tab6[colunas].dropna()
     
+    
+    st.table(df_tab6_1[:27]) # TESTE
+    
     """
     #colunas = list(df_tab6_1.columns)
     
