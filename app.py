@@ -135,7 +135,7 @@ def main():
      'ANO',lista_anos)
     
 
-    st.subheader(+opcao_mes+'/'+opcao_ano)
+    st.subheader(opcao_mes+'/'+str(opcao_ano))
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
