@@ -142,6 +142,11 @@ def main():
     df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
    
     df_tab6_1 = df_tab6[colunas].dropna()
+    
+    colunas = list(df_tab6_1.columns)
+    
+    st.write("Colunas")
+    st.write(colunas)
  
     df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
@@ -157,10 +162,10 @@ def main():
     
     st.subheader(filtro_mes_ano)
         
-    colunas = list(df_tab6_1.columns)
+    #colunas = list(df_tab6_1.columns)
     
-    st.write("Colunas")
-    st.write(colunas)
+    #st.write("Colunas")
+    #st.write(colunas)
                
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
         
