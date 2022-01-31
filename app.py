@@ -101,6 +101,7 @@ def main():
     
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
+    """
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
@@ -111,7 +112,7 @@ def main():
     st.subheader("  Atual  -> "+meses[mes_final]+'/'+ano_final)
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
-    
+    """
     lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
@@ -142,6 +143,7 @@ def main():
    
     df_tab6_1 = df_tab6[colunas].dropna()
     
+    """
     #colunas = list(df_tab6_1.columns)
     
     #st.write("Colunas")
@@ -183,7 +185,7 @@ def main():
     with open('caged.csv', encoding="latin-1") as f:
         nome = 'caged_'+opcao_mes+'_'+opcao_ano+'.csv'
         st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
-    
+    """
     if choice == activities[0]:
     
         #st.table(df_tab6_2.style.format('{:7,.1}'))
