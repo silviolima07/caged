@@ -187,7 +187,7 @@ def main():
     
     if choice == activities[0]:
     
-        st.table(df_tab6_2.style.format(’{:7,.1f}’))
+        st.table(df_tab6_2.style.format('{:7,.1f}'))
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
