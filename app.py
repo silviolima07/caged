@@ -154,7 +154,7 @@ def main():
     
     #df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
-    teste = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', filtro_mes_ano * 5]
+    teste = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0',    'Janeiro/2020','Janeiro/2020','Janeiro/2020','Janeiro/2020','Janeiro/2020']
     
     df_tab6_1 = df_tab6_1.xs(teste, axis=1, drop_level=True)
     
