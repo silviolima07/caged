@@ -161,7 +161,8 @@ def main():
         
     df_tab6_2.to_csv("caged.csv", index=False, header=colunas)
     
-    download_link(df_tab6_2,"TESTE1","TESTE2")
+    with open('caged.csv') as f:
+        st.download_button('Download CSV', f)  # Defaults to 'text/plain
     
     if choice == activities[0]:
     
