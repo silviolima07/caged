@@ -21,6 +21,7 @@ from lxml import html
 
 
 def download_link(df, texto1, texto2):
+    st.write("Efetuar download")
     if isinstance(df,pd.DataFrame):
         object_to_download = df.to_csv(index=False)
 
