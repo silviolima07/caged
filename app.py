@@ -99,7 +99,6 @@ def main():
     mes_final = mesano[0:3]
     ano_final = mesano[3:]
     
-       
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
     df_teste = df_tab6.dropna()
@@ -188,7 +187,7 @@ def main():
     if choice == activities[0]:
     
         #st.table(df_tab6_2.style.format('{:7,.1}'))
-        st.table(df_tab6_2.style.format('{:7,.1f}'))
+        st.table(df_tab6_2)
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
