@@ -109,7 +109,7 @@ def main():
     mes_inicial, ano_inicial = mes_ano_inicial.split('/')
     
     st.subheader("Inicial  -> "+mes_inicial+'/'+ano_inicial)
-    st.markdown("  Atual  -> "+meses[mes_final]+'/'+ano_final)
+    st.subheader("  Atual  -> "+meses[mes_final]+'/'+ano_final)
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
@@ -119,13 +119,14 @@ def main():
                    meses['Out'], meses['Nov'], meses['Dez']]
     lista_anos = [ano_inicial, ano_final]
     
+    st.suheader("Pesquisar")
     opcao_mes = st.selectbox(
-     'Mês de interesse',lista_meses)
+     'MÊS',lista_meses)
      
     opcao_ano = st.selectbox(
-     'Ano de interesse',lista_anos)
+     'ANO',lista_anos)
     
-    st.write("Pesquisar")
+    
     st.write("--> "+opcao_mes+'/'+opcao_ano)
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
@@ -161,7 +162,7 @@ def main():
         
     df_tab6_2.to_csv("caged.csv", index=False, header=colunas)
     
-    with open('caged.csv', encoding="latin-1") as f:
+    with open('caged.csv', encoding="") as f:
         nome = 'caged_'+opcao_mes+'_'+opcao_ano+'.csv'
         st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
     
