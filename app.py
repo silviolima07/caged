@@ -165,7 +165,7 @@ def main():
     colunas = list(df_tab6_1.columns)
     
     if ("Variação Relativa (%)" in colunas and filtro_mes_ano == 'Janeiro/2020'):
-        colunas = list(df_tab6_1.columns[::-1])
+        colunas = list(df_tab6_1.columns)[::-1]
     
     st.write("Colunas")
     st.write(colunas)
