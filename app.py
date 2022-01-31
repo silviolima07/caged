@@ -101,7 +101,8 @@ def main():
     
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
-    #st.table(df_tab6[:27])
+    st.title("Apos carregar a tabela")
+    st.table(df_tab6[:27])
     
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
@@ -142,7 +143,7 @@ def main():
     
     df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
    
-    df_tab6 = df_tab6[colunas].dropna()
+    #df_tab6 = df_tab6[colunas].dropna()
     
     #df_tab6.columns = df_tab6.columns.droplevel(0)   
     
