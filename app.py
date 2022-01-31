@@ -119,7 +119,13 @@ def main():
                    meses['Out'], meses['Nov'], meses['Dez']]
     lista_anos = [ano_inicial, ano_final]
     
-    st.subheader("Pesquisar")
+    html_page3 = """
+    <div style="background-color:white;padding=25px">
+        <p style='text-align:left;font-size:25px;font-weight:bold;color:blue'>Pesquisar</p>
+    </div>
+              """
+    st.markdown(html_page3, unsafe_allow_html=True)
+    
     opcao_mes = st.selectbox(
      'MÊS',lista_meses)
      
