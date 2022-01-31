@@ -160,7 +160,7 @@ def main():
     
     st.table(df_tab6_1) # TESTE
     
-    df_tab6_1.to_csv("caged.csv", index=False, encoding='utf-16')
+    df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
     
     with open('caged.csv') as f:
         nome = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
