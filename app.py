@@ -156,7 +156,7 @@ def main():
     #<div style="background-color:blue;padding=40px">
     #    <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Relatório</p>
     #</div>
-              """
+    """
     st.markdown(html_page3, unsafe_allow_html=True)
     
     #st.table(df_tab6_1)# TESTE
