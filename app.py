@@ -152,7 +152,7 @@ def main():
         
     colunas = list(df_tab6_1.columns)
                
-    df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
+    df_tab6_1.to_csv("caged.csv", index=False, header=colunas,encoding='utf-8')
         
     df_tab6_1 = pd.read_csv('./caged.csv')
         
