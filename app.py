@@ -112,11 +112,11 @@ def main():
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
-    lista_meses = [meses['Jan'], meses['Jan'], meses['Mar'],
+    lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
                    meses['Out'], meses['Nov'], meses['Dez']]
-    lista_anos = [ano_inicial, ano_final]
+    lista_anos = [ano_inicial, 2020]
     
     opcao_mes = st.selectbox(
      'Mês de interesse',lista_meses)
