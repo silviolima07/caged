@@ -152,7 +152,9 @@ def main():
     
     df_tab6_1 = df_tab6[colunas][:27])
     
-    df_tab6_1.columns = df_tab6_1.columns.droplevel()
+    #df_tab6_1.columns = df_tab6_1.columns.droplevel()
+    
+    st.write(df_tab6_1.columns)
     
     st.table(df_tab6_1) # TESTE
     
