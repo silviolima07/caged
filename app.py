@@ -133,7 +133,7 @@ def main():
      'ANO',lista_anos)
     
     
-    st.write("--> "+opcao_mes+'/'+opcao_ano)
+    #st.write("--> "+opcao_mes+'/'+opcao_ano)
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
