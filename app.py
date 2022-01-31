@@ -102,13 +102,13 @@ def main():
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
     st.table(df_tab6[:27])
-    """
+    
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
     
     mes_inicial, ano_inicial = mes_ano_inicial.split('/')
-    
+    """
     st.subheader("Inicial  -> "+mes_inicial+'/'+ano_inicial)
     st.subheader("  Atual  -> "+meses[mes_final]+'/'+ano_final)
     
