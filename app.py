@@ -190,14 +190,14 @@ def main():
     if choice == activities[0]:
     
         #st.table(df_tab6_2.style.format('{:7,.1}'))
-        st.table(df_tab6_2)
+        #st.table(df_tab6_2)
         
     elif choice == activities[1]:
         #st.sidebar.image(aguia1,caption="", width=300)
         #df = pd.read_csv(file_csv[0])
         #total = str(len(df))
         st.title(activities[1])
-        st.table(df_tab6_2)
+        #st.table(df_tab6_2)
 
         
         # link is the column with hyperlinks
