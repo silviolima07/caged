@@ -145,7 +145,8 @@ def main():
    
     df_tab6 = df_tab6.fillna("Sem informação")
     
-    #df_tab6.columns = df_tab6.columns.droplevel(0)   
+    #df_tab6.columns = df_tab6.columns.droplevel(0)
+    df_tab6.columns = [col[1] for col in df_tab6.columns]    
     
     st.table(df_tab6[colunas][:27]) # TESTE
     
