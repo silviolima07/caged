@@ -101,7 +101,7 @@ def main():
     
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
-    st.table(df_tab6[:27])
+    #st.table(df_tab6[:27])
     
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
@@ -145,7 +145,7 @@ def main():
     df_tab6_1 = df_tab6[colunas].dropna()
     
     
-    st.table(df_tab6_1[:27]) # TESTE
+    st.table(df_tab6_1[]) # TESTE
     
     """
     #colunas = list(df_tab6_1.columns)
