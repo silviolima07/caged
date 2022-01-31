@@ -188,7 +188,7 @@ def main():
         st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
     """
     if choice == activities[0]:
-    
+         st.write("TESTE")
         #st.table(df_tab6_2.style.format('{:7,.1}'))
         #st.table(df_tab6_2)
         
