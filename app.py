@@ -162,7 +162,7 @@ def main():
     df_tab6_2.to_csv("caged.csv", index=False, header=colunas)
     
     with open('caged.csv') as f:
-        st.download_button('Download CSV', f, 'csv')  # Defaults to 'text/plain
+        st.download_button('Download CSV', f, 'caged.csv')  # Defaults to 'text/plain
     
     if choice == activities[0]:
     
