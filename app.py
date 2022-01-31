@@ -201,7 +201,7 @@ def main():
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
     
     with open('caged.csv', encoding="latin-1") as f:
-        nome = 'caged_'+opcao_mes+'_'+opcao_ano+'.csv'
+        nome = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
         st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
     
     if choice == activities[0]:
