@@ -154,6 +154,10 @@ def main():
     
     #df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
+    teste = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', filtro_mes_ano * 5]
+    
+    df_tab6_1 = df_tab6_1.xs(teste, axis=1, drop_level=True)
+    
     st.write(df_tab6_1.columns)
     
     st.table(df_tab6_1) # TESTE
