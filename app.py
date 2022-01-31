@@ -150,9 +150,7 @@ def main():
     #df_tab6.columns = df_tab6.columns.droplevel(0)
     #df_tab6.columns = [col[0] for col in df_tab6.columns]    Quase
     
-    df_tab6.to_csv("caged.csv", index=False)
-    
-    df_tab6 = pd.read_csv("caged.csv", cols=colunas)
+   
     
     st.table(df_tab6[colunas][:27]) # TESTE
     
