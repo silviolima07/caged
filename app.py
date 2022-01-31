@@ -160,6 +160,8 @@ def main():
         
     df_tab6_2.to_csv("caged.csv", index=False, header=colunas)
     
+    download_link(df_tab6_2,"TESTE1","TESTE2")
+    
     if choice == activities[0]:
     
         st.table(df_tab6_2)
