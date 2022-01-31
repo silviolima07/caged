@@ -150,9 +150,11 @@ def main():
     #df_tab6.columns = df_tab6.columns.droplevel(0)
     #df_tab6.columns = [col[0] for col in df_tab6.columns]    Quase
     
-   
+    df_tab6_1 = df_tab6[colunas][:27])
     
-    st.table(df_tab6[colunas][:27]) # TESTE
+    df_tab6_1.columns = df_tab6_1.columns.droplevel()
+    
+    st.table(df_tab6_1) # TESTE
     
     
     """
