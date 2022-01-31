@@ -132,7 +132,7 @@ def main():
     opcao_ano = st.selectbox(
      'ANO',lista_anos)
     
-E
+
     #st.write("--> "+opcao_mes+'/'+opcao_ano)
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
