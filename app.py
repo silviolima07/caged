@@ -132,7 +132,7 @@ def main():
     opcao_ano = st.selectbox(
      'ANO',lista_anos)
     
-    
+E
     #st.write("--> "+opcao_mes+'/'+opcao_ano)
     
     filtro_mes_ano = opcao_mes+'/'+opcao_ano
@@ -158,6 +158,8 @@ def main():
     st.subheader(filtro_mes_ano)
         
     colunas = list(df_tab6_1.columns)
+    
+    st.write("Colunas: "+colunas)
                
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
         
