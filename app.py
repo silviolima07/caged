@@ -18,6 +18,9 @@ import requests
 from lxml import html
 
 
+@st.cache
+    def convert_df(df):
+        return df.to_csv().encode('ISO-8859-1')
 
 
 def download_link(df, texto1, texto2):
@@ -56,23 +59,9 @@ def main():
               """
     st.markdown(html_page2, unsafe_allow_html=True)
 
-    activities = ["Home",'Gráficos',"About"]
-    choice = st.sidebar.selectbox("Selecione uma opção",activities)
-
-    # Definir a data da última atualização
-
-
-    #f = open("update", "r")
-    #data_update = f.read()
+    activities = ["Home",'Relatórios',"About"]
+    choice = st.sidebar.selectbox("Selecione uma opção",activities)  
     
-    
-
-    #parser = 'html.parser'  # or 'lxml' (preferred) or 'html5lib', if installed
-    #resp = urllib.request.urlopen(url_caged)
-    #soup = BeautifulSoup(resp, parser, from_encoding=resp.info().get_param('charset'))
-    #url_tabela='http://pdet.mte.gov.br'
-    
-    from lxml import html
     
     url_caged = "http://pdet.mte.gov.br/novo-caged"
     url_tabela= 'http://pdet.mte.gov.br'
@@ -83,8 +72,6 @@ def main():
     
     for link in webpage.xpath('//a/@href'):
         if "tabelas.xlsx" in link:
-            #print("Link:",link)
-            #print("Url tabela: ", url_tabela+str(link))
             url_tabela = url_tabela+str(link)
     
     
@@ -101,9 +88,6 @@ def main():
     
     df_tab6 = excel_to_pandas2(url_tabela,'caged.xlsx', 'Tabela 6', [4,5] )
     
-    #st.title("Apos carregar a tabela")
-    #st.table(df_tab6[:27])
-    
     df_teste = df_tab6.dropna()
     teste_colunas = df_teste.columns
     mes_ano_inicial = teste_colunas[2][0]
@@ -115,70 +99,72 @@ def main():
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
-    lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
+    if choice == activities[0]:
+        st.write("Informações do Caged")
+    
+    elif choice == activities[1]:
+        html_page2 = """
+    <div style="background-color:white;padding=30px">
+        <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
+    </div>
+              """
+        st.markdown(html_page2, unsafe_allow_html=True)    
+    
+        lista_meses = [meses['Jan'], meses['Fev'], meses['M ar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
                    meses['Out'], meses['Nov'], meses['Dez']]
-    lista_anos = [ano_inicial, ano_final]
+        lista_anos = [ano_inicial, ano_final]
     
-    opcao_mes = st.selectbox(
+        opcao_mes = st.selectbox(
      'MÊS',lista_meses)
      
-    opcao_ano = st.selectbox(
+        opcao_ano = st.selectbox(
      'ANO',lista_anos)
     
 
-    st.subheader(opcao_mes+'/'+str(opcao_ano))
+        st.subheader(opcao_mes+'/'+str(opcao_ano))
     
-    filtro_mes_ano = opcao_mes+'/'+opcao_ano
+        filtro_mes_ano = opcao_mes+'/'+opcao_ano
     
-    colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', filtro_mes_ano]
+        colunas = ['Grupamento de Atividades Econômicas e Seção CNAE 2.0', filtro_mes_ano]
     
-    df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
+        df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
    
-    df_tab6 = df_tab6.fillna("Sem informação")
+        df_tab6 = df_tab6.fillna("Sem informação")
     
-    #df_tab6.droplevel(level=0)
+        #df_tab6.droplevel(level=0)
     
-    #df_tab6.columns = df_tab6.columns.droplevel(0)
-    #df_tab6.columns = [col[0] for col in df_tab6.columns]    Quase
+        #df_tab6.columns = df_tab6.columns.droplevel(0)
+        #df_tab6.columns = [col[0] for col in df_tab6.columns]    Quase
     
-    df_tab6_1 = df_tab6[colunas][:27]
+        df_tab6_1 = df_tab6[colunas][:27]
     
-    #df_tab6_1.columns = df_tab6_1.columns.droplevel()
+        #df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
-    df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
+        df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
     
-    #st.write(df_tab6_1.columns)
+        #st.write(df_tab6_1.columns)
     
-    st.table(df_tab6_1) # TESTE
+        st.table(df_tab6_1) # TESTE
     
-    df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
+        df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
     
-    @st.cache
-    def convert_df(df):
-        return df.to_csv().encode('ISO-8859-1')
+    
+        #Download
 
-
-    csv = convert_df(df_tab6_1)
+        csv = convert_df(df_tab6_1)
     
-    filename = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
+        filename = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
     st.download_button(
    "Press to Download",csv, filename,"text/csv",key='download-csv'
     )
     
-    df_tab6_1.to_csv("caged.csv", index=False)
+        df_tab6_1.to_csv("caged.csv", index=False)
     
-    #with open('caged.csv', encoding="'ISO-8859-1") as f:
-    #    nome = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
-    #    st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
     
-    #if choice == activities[0]:
-    #    st.write("TESTE")
-    #    #st.table(df_tab6_2.style.format('{:7,.1}'))
-    #    #st.table(df_tab6_2)
   
-    if choice == 'About':
+    elif choice == 'About':
         #st.sidebar.image(about,caption="", width=300, height= 200)
         st.subheader("Built with Streamlit")
         
