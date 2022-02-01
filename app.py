@@ -18,9 +18,7 @@ import requests
 from lxml import html
 
 
-@st.cache
-def convert_df(df):
-    return df.to_csv().encode('ISO-8859-1')
+
 
 
 def download_link(df, texto1, texto2):
@@ -148,15 +146,19 @@ def main():
     
         st.table(df_tab6_1) # TESTE
     
-        df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
+        #df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
     
     
         #Download
+        
+        @st.cache
+        def convert_df(df):
+            return df.to_csv().encode('ISO-8859-1')
 
         csv = convert_df(df_tab6_1)
     
         filename = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
-    st.download_button("Press to Download",csv, filename,"text/csv",key='download-csv')
+        st.download_button("Press to Download",csv, filename,"text/csv",key='download-csv')
     
         #df_tab6_1.to_csv("caged.csv", index=False)
     
