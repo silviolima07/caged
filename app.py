@@ -182,10 +182,11 @@ def main():
     df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
     
-    html_page3 = """
+    html_page4 = """
     <div style="background-color:blue;padding=40px">
     <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Relatório</p>
     </div>
+    st.markdown(html_page4, unsafe_allow_html=True)
     
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
     
