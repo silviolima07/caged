@@ -38,6 +38,10 @@ def excel_to_pandas2(URL, local_path, sheet, header):
     df = pd.read_excel(local_path,sheet_name=sheet,header=header)
     return df    
 
+@st.cache
+def convert_df(df):
+    return df.to_csv().encode('ISO-8859-1')
+
 def main():
 
     """Indeed App """
@@ -97,10 +101,10 @@ def main():
     
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
-    if choice == activities[0]:
+    if choice == activities[1]:
         st.write("Informações do Caged")
     
-    elif choice == activities[1]:
+    elif choice == activities[0]:
         html_page2 = """
     <div style="background-color:white;padding=30px">
         <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
@@ -151,41 +155,39 @@ def main():
     
         #Download
         
-        @st.cache
-        def convert_df(df):
-            return df.to_csv().encode('ISO-8859-1')
+        
 
         csv = convert_df(df_tab6_1)
     
         filename = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
-        st.download_button("Press to Download",csv, filename,"text/csv",key='download-csv')
+        st.download_button("Download",csv, filename,"text/csv",key='download-csv')
     
         #df_tab6_1.to_csv("caged.csv", index=False)
     
     
-    """
-    elif choice == activities[2]:
-        #st.sidebar.image(about,caption="", width=300, height= 200)
-        st.subheader("Built with Streamlit")
+   
+    #elif choice == activities[2]:
+    #    #st.sidebar.image(about,caption="", width=300, height= 200)
+    #    st.subheader("Built with Streamlit")
+    #    
+    #    st.write("Dados coletados via scrap do Caged")
+    #    #st.markdown("A coleta dos dados é feita às 9h, 12h, 15h e 18h")
+    #    #st.write("Executados via crontab scripts realizam o scrap e atualização do app.")
+    #    #st.write("Foram definidos 4 cargos apenas para validar o processo.")
+    #    #st.write("O scrap para o cargo de Engenheiro de Machine Learning trouxe poucas linhas.")
+    #    #st.write("Para os demais cargos, foram encontradas mais de 100 vagas, distribuídas em diversas páginas.")
+    #    #st.write("Esse app traz as 10 primeiras páginas apenas.")
+    #    #st.subheader("Observacao:")
+    #    #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
+    #    #st.subheader("Versão 02")
+    #    #st.write(" - incluído o link encurtado da vaga")
+    #    st.subheader("by Silvio Lima")
         
-        st.write("Dados coletados via scrap do Caged")
-        #st.markdown("A coleta dos dados é feita às 9h, 12h, 15h e 18h")
-        #st.write("Executados via crontab scripts realizam o scrap e atualização do app.")
-        #st.write("Foram definidos 4 cargos apenas para validar o processo.")
-        #st.write("O scrap para o cargo de Engenheiro de Machine Learning trouxe poucas linhas.")
-        #st.write("Para os demais cargos, foram encontradas mais de 100 vagas, distribuídas em diversas páginas.")
-        #st.write("Esse app traz as 10 primeiras páginas apenas.")
-        #st.subheader("Observacao:")
-        #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
-        #st.subheader("Versão 02")
-        #st.write(" - incluído o link encurtado da vaga")
-        st.subheader("by Silvio Lima")
-        
-        if st.button("Linkedin"):
-            js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+    #    if st.button("Linkedin"):
+    #        js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
+    #       html = '<img src onerror="{}">'.format(js)
+    #        div = Div(text=html)
+    #        st.bokeh_chart(div)
     
 
        
