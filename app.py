@@ -163,7 +163,7 @@ def main():
         #df_tab6_1.to_csv("caged.csv", index=False)
     
     
-  
+    """
     elif choice == activities[2]:
         #st.sidebar.image(about,caption="", width=300, height= 200)
         st.subheader("Built with Streamlit")
@@ -190,7 +190,7 @@ def main():
 
        
 
-   
+    """   
     
     
 if __name__ == '__main__':
