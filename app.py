@@ -54,12 +54,12 @@ def main():
               """
     st.markdown(html_page1, unsafe_allow_html=True)
    
-    html_page2 = """
-    <div style="background-color:white;padding=30px">
-        <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
-    </div>
+    #html_page2 = """
+    #<div style="background-color:white;padding=30px">
+    #    <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
+    #</div>
               """
-    st.markdown(html_page2, unsafe_allow_html=True)
+    #st.markdown(html_page2, unsafe_allow_html=True)
 
     activities = ['Relatórios',"About"]
     choice = st.sidebar.selectbox("Selecione uma opção",activities)  
