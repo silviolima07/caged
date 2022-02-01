@@ -121,13 +121,6 @@ def main():
                    meses['Out'], meses['Nov'], meses['Dez']]
     lista_anos = [ano_inicial, ano_final]
     
-    html_page3 = """
-    <div style="background-color:white;padding=25px">
-        <p style='text-align:left;font-size:25px;font-weight:bold;color:blue'>Pesquisar</p>
-    </div>
-              """
-    st.markdown(html_page3, unsafe_allow_html=True)
-    
     opcao_mes = st.selectbox(
      'MÊS',lista_meses)
      
@@ -172,21 +165,6 @@ def main():
     st.download_button(
    "Press to Download",csv,"file.csv","text/csv",key='download-csv'
     )
-    
-    """
-    #colunas = list(df_tab6_1.columns)
-    
-    #st.write("Colunas")
-    #st.write(colunas)
- 
-    df_tab6_1.columns = df_tab6_1.columns.droplevel()
-    
-    
-    html_page4 = """
-    <div style="background-color:blue;padding=40px">
-    <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Relatório</p>
-    </div>
-    st.markdown(html_page4, unsafe_allow_html=True)
     
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
     
