@@ -99,7 +99,7 @@ def main():
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
     if choice == activities[1]:
-        st.write("Informações do Caged")
+        st.subheader("Informações do Caged")
         st.write("O  CAGED constitui importante fonte de informação do mercado de trabalho")
         st.write("de âmbito nacional e de periodicidade mensal. Foi criado como instrumento")
         st.write("de acompanhamento e de fiscalização do processo de admissão e de dispensa")
@@ -109,11 +109,11 @@ def main():
         st.write("também, um relevante instrumento à reciclagem profissional e à recolocação do trabalhador")
         st.write("no mercado de trabalho.")
         st.write("")
-        if st.button("Caged"):
-            js = "window.open('http://pdet.mte.gov.br/caged'/)"
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+        #if st.button("Caged"):
+        #    js = "window.open('http://pdet.mte.gov.br/caged'/)"
+        #    html = '<img src onerror="{}">'.format(js)
+        #    div = Div(text=html)
+        #    st.bokeh_chart(div)
         
         
     
