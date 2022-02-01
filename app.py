@@ -173,32 +173,9 @@ def main():
         st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
     
     if choice == activities[0]:
-         st.write("TESTE")
+        st.write("TESTE")
         #st.table(df_tab6_2.style.format('{:7,.1}'))
         #st.table(df_tab6_2)
-    """    
-    elif choice == activities[1]:
-        #st.sidebar.image(aguia1,caption="", width=300)
-        #df = pd.read_csv(file_csv[0])
-        #total = str(len(df))
-        st.title(activities[1])
-        #st.table(df_tab6_2)
-
-        
-        # link is the column with hyperlinks
-        #df['Link'] = df['Link'].apply(make_clickable)
-        #df = df.to_html(escape=False)
-        #st.markdown(df, unsafe_allow_html=True)
-
-        
-        #st.table(df)
-        #if st.button('Download Dataframe as CSV'):
-        #    cargo = activities[1].replace(' ', '_')
-        #    filename = 'indeed_'+cargo+'.csv'
-        #    st.subheader("Salvando: "+filename)
-        #    tmp_download_link = download_link(df, filename, 'Click here to download your data!')
-        #    st.markdown(tmp_download_link, unsafe_allow_html=True)
-    """ 
   
     elif choice == 'About':
         #st.sidebar.image(about,caption="", width=300, height= 200)
