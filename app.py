@@ -156,9 +156,7 @@ def main():
         csv = convert_df(df_tab6_1)
     
         filename = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
-    st.download_button(
-   "Press to Download",csv, filename,"text/csv",key='download-csv'
-    )
+    st.download_button("Press to Download",csv, filename,"text/csv",key='download-csv')
     
         #df_tab6_1.to_csv("caged.csv", index=False)
     
