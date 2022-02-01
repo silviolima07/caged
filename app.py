@@ -162,23 +162,15 @@ def main():
     
     df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
     
-    #with open('caged.csv', encoding='ISO-8859-1') as f:
-    #    nome = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
-    #    st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
-    
     @st.cache
     def convert_df(df):
-        return df.to_csv().encode('utf-8')
+        return df.to_csv().encode('ISO-8859-1')
 
 
     csv = convert_df(df_tab6_1)
 
     st.download_button(
-   "Press to Download",
-   csv,
-   "file.csv",
-   "text/csv",
-   key='download-csv'
+   "Press to Download",csv,"file.csv","text/csv",key='download-csv'
     )
     
     """
