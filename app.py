@@ -186,30 +186,7 @@ def main():
     #<div style="background-color:blue;padding=40px">
     #    <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Relatório</p>
     #</div>
-    """
-    st.markdown(html_page3, unsafe_allow_html=True)
     
-    #st.table(df_tab6_1)# TESTE
-    
-    st.subheader(filtro_mes_ano)
-        
-    #colunas = list(df_tab6_1.columns)
-    
-    if (filtro_mes_ano == 'Janeiro/2020'):
-        colunas = list(df_tab6_1.columns)[:-1]
-    else:
-        colunas = list(df_tab6_1.columns)
-    
-    st.write("Colunas")
-    st.write(colunas)
-               
-    df_tab6_1.to_csv("caged.csv", index=False, header=colunas, columns = colunas)
-        
-    df_tab6_1 = pd.read_csv('./caged.csv')
-        
-    temp1 = df_tab6_1.loc[df_tab6_1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Não identificado***']
-    df_tab6_2= temp1.loc[temp1['Grupamento de Atividades Econômicas e Seção CNAE 2.0'] != 'Total']
-    """    
     df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
     
     with open('caged.csv', encoding="latin-1") as f:
