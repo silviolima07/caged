@@ -105,13 +105,7 @@ def main():
         st.write("Informações do Caged")
     
     elif choice == activities[0]:
-        html_page2 = """
-    <div style="background-color:white;padding=30px">
-        <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
-    </div>
-              """
-        st.markdown(html_page2, unsafe_allow_html=True)    
-    
+       
         lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
