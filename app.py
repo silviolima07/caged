@@ -58,7 +58,7 @@ def main():
     #<div style="background-color:white;padding=30px">
     #    <p style='text-align:left;font-size:30px;font-weight:bold;color:blue'>Relatórios</p>
     #</div>
-              """
+    #          """
     #st.markdown(html_page2, unsafe_allow_html=True)
 
     activities = ['Relatórios',"About"]
@@ -158,30 +158,6 @@ def main():
     
         #df_tab6_1.to_csv("caged.csv", index=False)
     
-    
-   
-    #elif choice == activities[2]:
-    #    #st.sidebar.image(about,caption="", width=300, height= 200)
-    #    st.subheader("Built with Streamlit")
-    #    
-    #    st.write("Dados coletados via scrap do Caged")
-    #    #st.markdown("A coleta dos dados é feita às 9h, 12h, 15h e 18h")
-    #    #st.write("Executados via crontab scripts realizam o scrap e atualização do app.")
-    #    #st.write("Foram definidos 4 cargos apenas para validar o processo.")
-    #    #st.write("O scrap para o cargo de Engenheiro de Machine Learning trouxe poucas linhas.")
-    #    #st.write("Para os demais cargos, foram encontradas mais de 100 vagas, distribuídas em diversas páginas.")
-    #    #st.write("Esse app traz as 10 primeiras páginas apenas.")
-    #    #st.subheader("Observacao:")
-    #    #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
-    #    #st.subheader("Versão 02")
-    #    #st.write(" - incluído o link encurtado da vaga")
-    #    st.subheader("by Silvio Lima")
-        
-    #    if st.button("Linkedin"):
-    #        js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
-    #       html = '<img src onerror="{}">'.format(js)
-    #        div = Div(text=html)
-    #        st.bokeh_chart(div)
     
    
     
