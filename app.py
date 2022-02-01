@@ -110,7 +110,7 @@ def main():
         st.write("no mercado de trabalho.")
         st.write("")
         if st.button("Caged"):
-            js = "window.open('http://pdet.mte.gov.br/caged')"
+            js = "window.open('http://pdet.mte.gov.br/caged'/)"
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
