@@ -59,7 +59,7 @@ def main():
               """
     st.markdown(html_page2, unsafe_allow_html=True)
 
-    activities = ["Home",'Relatórios',"About"]
+    activities = ['Relatórios',"About"]
     choice = st.sidebar.selectbox("Selecione uma opção",activities)  
     
     
@@ -110,7 +110,7 @@ def main():
               """
         st.markdown(html_page2, unsafe_allow_html=True)    
     
-        lista_meses = [meses['Jan'], meses['Fev'], meses['M ar'],
+        lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
                    meses['Jul'], meses['Ago'], meses['Set'],
                    meses['Out'], meses['Nov'], meses['Dez']]
