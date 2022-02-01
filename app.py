@@ -178,7 +178,7 @@ def main():
     #    #st.table(df_tab6_2.style.format('{:7,.1}'))
     #    #st.table(df_tab6_2)
   
-    elif choice == 'About':
+    if choice == 'About':
         #st.sidebar.image(about,caption="", width=300, height= 200)
         st.subheader("Built with Streamlit")
         
