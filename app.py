@@ -19,8 +19,8 @@ from lxml import html
 
 
 @st.cache
-    def convert_df(df):
-        return df.to_csv().encode('ISO-8859-1')
+def convert_df(df):
+    return df.to_csv().encode('ISO-8859-1')
 
 
 def download_link(df, texto1, texto2):
