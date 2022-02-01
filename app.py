@@ -100,8 +100,8 @@ def main():
     
     if choice == activities[1]:
         st.subheader("Informações do Caged")
-        st.write("O  CAGED constitui importante fonte de informação do mercado de trabalho")
-        st.write("de âmbito nacional e de periodicidade mensal. Foi criado como instrumento")
+        st.markdown("O  CAGED constitui importante fonte de informação do mercado de trabalho")
+        st.write("    "+"de âmbito nacional e de periodicidade mensal. Foi criado como instrumento")
         st.write("de acompanhamento e de fiscalização do processo de admissão e de dispensa")
         st.write("de trabalhadores regidos pela CLT, com o objetivo de assistir os desempregados")
         st.write("e de apoiar medidas contra o desemprego. A partir de 1986, passou a ser utilizado")
