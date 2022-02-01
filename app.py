@@ -166,7 +166,7 @@ def main():
    "Press to Download",csv,"file.csv","text/csv",key='download-csv'
     )
     
-    df_tab6_1.to_csv("caged.csv", index=False, header=colunas)
+    df_tab6_1.to_csv("caged.csv", index=False)
     
     with open('caged.csv', encoding="latin-1") as f:
         nome = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
