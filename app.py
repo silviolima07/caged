@@ -189,10 +189,7 @@ def main():
     #        div = Div(text=html)
     #        st.bokeh_chart(div)
     
-
-       
-
-    """   
+   
     
     
 if __name__ == '__main__':
