@@ -96,15 +96,16 @@ def main():
     
     mes_inicial, ano_inicial = mes_ano_inicial.split('/')
     
-    st.subheader("Inicial  -> "+mes_inicial+'/'+ano_inicial)
-    st.subheader("  Atual  -> "+meses[mes_final]+'/'+ano_final)
-    
     mes_ano_final = meses[mes_final]+'/'+ano_final
     
     if choice == activities[1]:
         st.write("Informações do Caged")
     
     elif choice == activities[0]:
+    
+        st.subheader("Inicial  -> "+mes_inicial+'/'+ano_inicial)
+        st.subheader("  Atual  -> "+meses[mes_final]+'/'+ano_final)
+    
        
         lista_meses = [meses['Jan'], meses['Fev'], meses['Mar'],
                    meses['Abr'], meses['Mai'], meses['Jun'],
