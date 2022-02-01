@@ -164,7 +164,7 @@ def main():
     
     
   
-    elif choice == 'About':
+    elif choice == activities[2]:
         #st.sidebar.image(about,caption="", width=300, height= 200)
         st.subheader("Built with Streamlit")
         
