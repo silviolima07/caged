@@ -161,21 +161,22 @@ def main():
 
 
     csv = convert_df(df_tab6_1)
-
+    
+    filename = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
     st.download_button(
-   "Press to Download",csv,"file.csv","text/csv",key='download-csv'
+   "Press to Download",csv, filename,"text/csv",key='download-csv'
     )
     
     df_tab6_1.to_csv("caged.csv", index=False)
     
-    with open('caged.csv', encoding="'ISO-8859-1") as f:
-        nome = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
-        st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
+    #with open('caged.csv', encoding="'ISO-8859-1") as f:
+    #    nome = 'caged_'+opcao_mes+'_'+str(opcao_ano)+'.csv'
+    #    st.download_button('Download CSV', f, nome)  # Defaults to 'text/plain
     
-    if choice == activities[0]:
-        st.write("TESTE")
-        #st.table(df_tab6_2.style.format('{:7,.1}'))
-        #st.table(df_tab6_2)
+    #if choice == activities[0]:
+    #    st.write("TESTE")
+    #    #st.table(df_tab6_2.style.format('{:7,.1}'))
+    #    #st.table(df_tab6_2)
   
     elif choice == 'About':
         #st.sidebar.image(about,caption="", width=300, height= 200)
