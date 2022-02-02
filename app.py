@@ -180,7 +180,9 @@ def main():
     
         df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
         
-        df = pd.read_csv("caged.csv",decimal=',', encoding='ISO-8859-1', dtype= {'Estoque':'string',	'Admissões':'string',	'Desligamentos':'string',	'Saldos':'string'})
+        df = pd.read_csv("caged.csv",decimal=',', encoding='ISO-8859-1')
+        
+        st.subheader(df['Variação Relativa (%)'])
         
         df['Variação Relativa (%)'] = round(df['Variação Relativa (%)'],2)
         
