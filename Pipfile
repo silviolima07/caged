@@ -9,6 +9,7 @@ verify_ssl = true
 bokeh = "*"
 lxml = "*"
 openpyxl = "*"
+streamlit = "*"
 
 [requires]
 python_version = "3.6"
