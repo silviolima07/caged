@@ -163,7 +163,7 @@ def main():
         #st.write(df_tab6_1.columns)
         
         
-        coluna_float = df_tab6_1.columns[5]
+        #coluna_float = df_tab6_1.columns[5]
         
         #st.write(coluna_float)
         
@@ -182,7 +182,7 @@ def main():
         
         #df = pd.read_csv("caged.csv",decimal='.', encoding='ISO-8859-1')
         
-        st.subheader(df_tab6_1['Variação Relativa (%)'])
+        #st.subheader(df_tab6_1['Variação Relativa (%)'])
         
         #df['Variação Relativa (%)'] = round(df['Variação Relativa (%)'],2)
         
