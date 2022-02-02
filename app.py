@@ -175,12 +175,14 @@ def main():
         #df_tab6_1[df_tab6_1.columns[5]] = float.style.format("{:.2}")
         
         #st.table(df_tab6_1.style.format(subset=[coluna_float[5]], formatter="{:.2f}"))
-        
-        print(df_tab6_1.info)
     
         st.table(df_tab6_1)
     
-        #df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
+        df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
+        
+        df = pd.read_csv("caged.csv",decimal=',')
+        
+        st.table(df)
     
     
         #Download
