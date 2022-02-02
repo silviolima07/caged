@@ -182,7 +182,7 @@ def main():
         
         df = pd.read_csv("caged.csv",decimal=',', encoding='ISO-8859-1', dtype= {'Estoque':'string',	'Admissões':'string',	'Desligamentos':'string',	'Saldos':'string'})
         
-        df['Variação Relativa (%)'= round(df['Variação Relativa (%)'],2)
+        df['Variação Relativa (%)'] = round(df['Variação Relativa (%)'],2)
         
         #df[coluna_float] = round(df[coluna_float],2)
         
