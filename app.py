@@ -162,7 +162,11 @@ def main():
     
         #st.write(df_tab6_1.columns)
         
-        st.dataframe(df_tab6_1.style.format(subset=['Position', 'Marks'], formatter="{:.2f}"))
+        colunas_float = df_tab6_1.columns
+        
+        st.write(colunas_float)
+        
+        st.dataframe(df_tab6_1.style.format(subset=[colunas_float[5]], formatter="{:.2f}"))
     
         st.table(df_tab6_1)
     
