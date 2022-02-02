@@ -188,6 +188,13 @@ def main():
         
         #df[coluna_float] = round(df[coluna_float],2)
         
+        
+        #value = 3.3333333333
+        formatted_string = "{:.2f}".format(df_tab6_1['Variação Relativa (%)'])
+        # format to two decimal places
+        float_value = float(formatted_string)
+        df_tab6_1['Variação Relativa (%)'] = float_value
+        
         st.table(df_tab6_1)
     
     
