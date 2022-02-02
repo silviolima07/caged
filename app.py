@@ -172,12 +172,12 @@ def main():
         
         
         
-        #float = df_tab6_1['Variação Relativa (%)']
+        float = df_tab6_1['Variação Relativa (%)']
         
         
         #df_tab6_1[df_tab6_1.columns[5]] = float.style.format("{:.2}")
         
-        st.table(df_tab6_1.style.format(subset=[coluna_float[5]], formatter="{:.2f}"))
+        st.table(df_tab6_1.style.format(subset=[float], formatter="{:.2f}"))
     
         #st.table(df_tab6_1)
     
