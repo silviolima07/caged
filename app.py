@@ -175,6 +175,12 @@ def main():
         #df_tab6_1[df_tab6_1.columns[5]] = float.style.format("{:.2}")
         
         #st.table(df_tab6_1.style.format(subset=[coluna_float[5]], formatter="{:.2f}"))
+        
+        colunas = df_tab6_1.columns
+        df_tab6_1[colunas[2] = int(df_tab6_1[colunas[2])
+        df_tab6_1[colunas[3] = int(df_tab6_1[colunas[3])
+        df_tab6_1[colunas[4] = int(df_tab6_1[colunas[4])
+        
     
         st.table(df_tab6_1)
     
