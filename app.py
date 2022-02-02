@@ -6,7 +6,9 @@ import pandas as pd
 
 from PIL import Image
 
-pd.set_option('precision',2)
+#pd.set_option('precision',2)
+
+pd.options.display.float_format = '${:. ,2f}'.format
 
 import base64
 
