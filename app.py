@@ -176,7 +176,7 @@ def main():
         
         #st.table(df_tab6_1.style.format(subset=[coluna_float[5]], formatter="{:.2f}"))
         
-        st.write(df_tab6_1.info)
+        print(df_tab6_1.info)
     
         st.table(df_tab6_1)
     
