@@ -180,7 +180,7 @@ def main():
     
         df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
         
-        df = pd.read_csv("caged.csv",decimal=',', encoding='latin-1')
+        df = pd.read_csv("caged.csv",decimal='.', encoding='latin-1')
         
         st.table(df)
     
