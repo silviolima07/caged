@@ -165,7 +165,7 @@ def main():
         
         coluna_float = df_tab6_1.columns
         
-        st.write(coluna_float)
+        #st.write(coluna_float)
         
         #df_tab6_1[coluna_float] = df_tab6_1.style.format(subset=[float(coluna_float)], formatter="{:.2f}")
         
