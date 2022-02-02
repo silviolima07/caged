@@ -162,7 +162,7 @@ def main():
     
         #st.write(df_tab6_1.columns)
         
-        coluna_float = df_tab6_1.columns[5]
+        coluna_float = df_tab6_1.columns
         
         st.write(coluna_float)
         
