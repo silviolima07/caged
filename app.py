@@ -8,7 +8,7 @@ from PIL import Image
 
 #pd.set_option('precision',2)
 
-#pd.options.display.float_format = '${:. ,2f}'.format
+pd.options.display.float_format = '${:. ,2f}'.format
 
 import base64
 
@@ -176,7 +176,7 @@ def main():
         
         #st.table(df_tab6_1.style.format(subset=[coluna_float[5]], formatter="{:.2f}"))
     
-        st.table(df_tab6_1)
+        #st.table(df_tab6_1)
     
         df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
         
