@@ -162,13 +162,17 @@ def main():
     
         #st.write(df_tab6_1.columns)
         
+        
+        
         coluna_float = df_tab6_1.columns
         
         st.write(coluna_float)
         
         #df_tab6_1[coluna_float] = df_tab6_1.style.format(subset=[float(coluna_float)], formatter="{:.2f}")
         
-        float = df_tab6_1.columns[5]
+        
+        temp = df_tab6_1.copy
+        float = temp.columns[5]
         
         
         df_tab6_1[df_tab6_1.columns[5]] = float.style.format("{:.2}")
