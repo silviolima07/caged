@@ -166,9 +166,9 @@ def main():
         
         st.write(coluna_float)
         
-        df_tab6_1[coluna_float] = df_tab6_1.style.format(subset=[float(coluna_float)], formatter="{:.2f}")
+        #df_tab6_1[coluna_float] = df_tab6_1.style.format(subset=[float(coluna_float)], formatter="{:.2f}")
         
-        #st.table(df_tab6_1.style.format(subset=[colunas_float[5]], formatter="{:.2f}"))
+        st.table(df_tab6_1.style.format(subset=[colunas_float[5]], formatter="{:.2f}"))
     
         st.table(df_tab6_1)
     
