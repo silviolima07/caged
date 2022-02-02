@@ -168,11 +168,11 @@ def main():
         
         #df_tab6_1[coluna_float] = df_tab6_1.style.format(subset=[float(coluna_float)], formatter="{:.2f}")
         
-        df_tab6_1[coluna_float[5]] = df_tab6_1.style.format(coluna_float[5], formatter="{:.2f}")
+        df_tab6_1[coluna_float[5]].style.format("{:.2}")
         
-        st.table(df_tab6_1.style.format(subset=[coluna_float[5]], formatter="{:.2f}"))
+        #st.table(df_tab6_1.style.format(subset=[coluna_float[5]], formatter="{:.2f}"))
     
-        #st.table(df_tab6_1)
+        st.table(df_tab6_1)
     
         #df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
     
