@@ -178,17 +178,17 @@ def main():
     
         #st.table(df_tab6_1)
     
-        df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
+        #df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1', decimal=',')
         
-        df = pd.read_csv("caged.csv",decimal=',', encoding='ISO-8859-1')
+        #df = pd.read_csv("caged.csv",decimal='.', encoding='ISO-8859-1')
         
-        st.subheader(df['Variação Relativa (%)'])
+        st.subheader(df_tab6_1['Variação Relativa (%)'])
         
-        df['Variação Relativa (%)'] = round(df['Variação Relativa (%)'],2)
+        #df['Variação Relativa (%)'] = round(df['Variação Relativa (%)'],2)
         
         #df[coluna_float] = round(df[coluna_float],2)
         
-        st.table(df)
+        st.table(df_tab6_1)
     
     
         #Download
