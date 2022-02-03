@@ -199,7 +199,7 @@ def main():
         
         #df = df_tab6_1.style.format({"Expense": lambda x : '{:}'.format(x)})
         
-        st.dataframe(df_tab6_1.style.set_precision(2),height=500)
+        st.dataframe(df_tab6_1.set_precision(2),height=500)
         
         #AgGrid(df_tab6_1)
         
