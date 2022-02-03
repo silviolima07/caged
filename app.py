@@ -160,7 +160,7 @@ def main():
     
         df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
     
-        #st.write(df_tab6_1.columns)
+        st.write(df_tab6_1)
         
         
         #coluna_float = df_tab6_1.columns[5]
