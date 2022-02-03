@@ -19,8 +19,6 @@ import requests
 
 from lxml import html
 
-from st_aggrid import AgGrid
-
 
 
 
