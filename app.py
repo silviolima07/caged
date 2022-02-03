@@ -197,7 +197,7 @@ def main():
         
         #df = df_tab6_1.style.format({"Expense": lambda x : '{:}'.format(x)})
         
-        st.dataframe(df_tab6_1.style.background_gradient(cmap=‘Greens’).set_precision(2),height=500)
+        st.dataframe(df_tab6_1.style.background_gradient(cmap='Greens').set_precision(2),height=500)
         
         #st.table(df)
         
