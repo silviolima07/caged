@@ -195,7 +195,9 @@ def main():
         #float_value = float(formatted_string)
         #df_tab6_1['Variação Relativa (%)'] = float_value
         
-        st.table(df_tab6_1.round(1))
+        df = df_tab6_1.style.format({"Expense": lambda x : '{:.4f}'.format(x)})
+        
+        st.table(df)
         
     
     
