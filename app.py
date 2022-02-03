@@ -186,6 +186,7 @@ def main():
         
         st.table(df)
     
+        st.dataframe(df)
     
         #Download
         
