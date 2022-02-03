@@ -8,7 +8,7 @@ from PIL import Image
 
 #pd.set_option('precision',2)
 
-pd.options.display.float_format = '${:. ,2f}'.format
+#pd.options.display.float_format = '${:. ,2f}'.format
 
 import base64
 
@@ -195,9 +195,8 @@ def main():
         #float_value = float(formatted_string)
         #df_tab6_1['Variação Relativa (%)'] = float_value
         
-        st.table(df_tab6_1)
+        st.table(df_tab6_1.round(1))
         
-        df_tab6_1.info
     
     
         #Download
