@@ -10,8 +10,6 @@ bokeh = "*"
 lxml = "*"
 openpyxl = "*"
 streamlit = "*"
-matplotlib = "*"
-streamlit-aggrid = "*"
 xlrd = "*"
 
 [requires]
