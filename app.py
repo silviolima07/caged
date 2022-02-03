@@ -154,13 +154,13 @@ def main():
         #df_tab6.columns = df_tab6.columns.droplevel(0)
         #df_tab6.columns = [col[0] for col in df_tab6.columns]    Quase
     
-        df_tab6_1 = df_tab6[colunas][:27]
+        #df_tab6_1 = df_tab6[colunas][:27]
     
         #df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
-        df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
+        #df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
     
-        st.write(df_tab6_1)
+        #st.write(df_tab6_1)
         
         
         #coluna_float = df_tab6_1.columns[5]
