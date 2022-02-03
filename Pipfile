@@ -11,6 +11,7 @@ lxml = "*"
 openpyxl = "*"
 streamlit = "*"
 matplotlib = "*"
+streamlit-aggrid = "*"
 
 [requires]
 python_version = "3.6"
