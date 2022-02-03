@@ -147,23 +147,23 @@ def main():
     
         df_tab6.rename(columns={'Unnamed: 1_level_1':"Grupamento de Atividades Econômicas e Seção CNAE 2.0"}, inplace=True)
    
-        df_tab6 = df_tab6.fillna(0)
+        df_tab6 = df_tab6.fillna(0.0)
     
         #df_tab6.droplevel(level=0)
     
         #df_tab6.columns = df_tab6.columns.droplevel(0)
         #df_tab6.columns = [col[0] for col in df_tab6.columns]    Quase
     
-        #df_tab6_1 = df_tab6[colunas][:27]
+        df_tab6_1 = df_tab6[colunas][:27]
     
         #df_tab6_1.columns = df_tab6_1.columns.droplevel()
     
-        #df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
+        df_tab6_1.columns=df_tab6_1.columns.get_level_values(1)
     
-        #st.write(df_tab6_1)
+        #st.write(df_tab6_1.columns)
         
         
-        #coluna_float = df_tab6_1.columns[5]
+        coluna_float = df_tab6_1.columns[5]
         
         #st.write(coluna_float)
         
@@ -178,31 +178,13 @@ def main():
     
         #st.table(df_tab6_1)
     
-        #df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1', decimal=',')
+        df_tab6_1.to_csv("caged.csv", index=False, encoding='ISO-8859-1')
         
-        #df = pd.read_csv("caged.csv",decimal='.', encoding='ISO-8859-1')
-        
-        #st.subheader(df_tab6_1['Variação Relativa (%)'])
-        
-        #df['Variação Relativa (%)'] = round(df['Variação Relativa (%)'],2)
+        df = pd.read_csv("caged.csv",decimal=',', encoding='ISO-8859-1')
         
         #df[coluna_float] = round(df[coluna_float],2)
         
-        
-        #value = 3.3333333333
-        #formatted_string = "{:.2f}".format(df_tab6_1['Variação Relativa (%)'])
-        # format to two decimal places
-        #float_value = float(formatted_string)
-        #df_tab6_1['Variação Relativa (%)'] = float_value
-        
-        #df = df_tab6_1.style.format({"Expense": lambda x : '{:}'.format(x)})
-        
-        st.table(df_tab6_1)
-        
-        #AgGrid(df_tab6_1)
-        
-        #st.table(df)
-        
+        st.table(df)
     
     
         #Download
