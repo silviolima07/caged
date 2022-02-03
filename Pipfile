@@ -10,6 +10,7 @@ bokeh = "*"
 lxml = "*"
 openpyxl = "*"
 streamlit = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.6"
