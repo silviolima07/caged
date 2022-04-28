@@ -17,7 +17,7 @@ import sys
 import numpy as np
 import requests
 
-from lxml import html
+#from lxml import html
 
 
 
